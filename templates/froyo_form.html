@@ -1,0 +1,14 @@
+@app.route('/froyo')
+def choose_froyo():
+    """Shows a form to collect the user's Fro-Yo order."""
+    return render_template('froyo_form.html')
+<!-- templates/froyo_form.html -->
+<form action="/froyo_results" method="GET">
+    <label>What is your favorite Fro-Yo flavor?</label><br/>
+    <input type="text" name="flavor"><br/>
+    
+    <label>What toppings would you like?</label><br/>
+    <input type="text" name="toppings"><br/>
+    
+    <input type="submit" value="Submit!">
+</form>
